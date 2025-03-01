@@ -1,6 +1,7 @@
 package com.kangwon.clip06;
 
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 
@@ -12,6 +13,9 @@ public class Publisher {
 //        Flux.fromIterable(List.of("a", "b", "c", "d", "e", "f"));
     }
 
-    public startMono() {}
+    public Mono<?> startMono() {
+//        return Mono.just(1);
+        return Mono.empty().log();
+    }
 
 }
