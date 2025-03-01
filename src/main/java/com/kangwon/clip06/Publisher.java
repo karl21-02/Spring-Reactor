@@ -13,9 +13,20 @@ public class Publisher {
 //        Flux.fromIterable(List.of("a", "b", "c", "d", "e", "f"));
     }
 
-    public Mono<?> startMono() {
-//        return Mono.just(1);
+    public Flux<String> startFlux2() {
+        return Flux.fromIterable(List.of("a", "b", "c", "d")).log();
+    }
+
+    public Mono<Integer> startMono() {
+        return Mono.just(1);
+    }
+
+    public Mono<?> startMono2() {
         return Mono.empty().log();
+    }
+
+    public Mono<?> startMono3() {
+        return Mono.error(new Exception("hello reactor"));
     }
 
 }
