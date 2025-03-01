@@ -1,0 +1,15 @@
+스프링 Reactor
+- map
+- filter
+- take
+- flatMap
+- ConcatMap
+- flatmapmany -> mono to flux
+- switchifempty, defaultifempty
+- count
+- distinct
+- reduce
+- groupby
+- limit
+- sample -> 작업 샘플링
+- schedule -> 작업별 스케쥴러 지정
